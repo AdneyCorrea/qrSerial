@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>qrSerial</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><h1>qrSerial</h1></header>
+    <div class="workspace">
+      <section class="panel entry">
+        <h2>Leitura</h2>
+        <form id="scan-form">
+          <label for="serial">Serial</label>
+          <input id="serial" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="120" placeholder="Serial" required autofocus>
+          <button type="submit">Adicionar</button>
+        </form>
+        <p id="status" role="status" aria-live="polite"></p>
+      </section>
+      <section class="panel batch">
+        <div class="batch-heading"><h2>Seriais</h2><span id="count" class="badge">0</span></div>
+        <p id="empty">Vazio</p>
+        <ol id="list"></ol>
+        <label for="title">Título</label>
+        <input id="title" maxlength="120" placeholder="Opcional" autocomplete="off">
+        <div class="actions"><button id="preview" disabled>Visualizar</button><button id="print" disabled>Imprimir</button><button id="finish" class="secondary" disabled>Baixar</button><button id="new-batch" class="secondary" disabled>Novo</button></div>
+        <a id="download" hidden>Baixar PDF</a>
+      </section>
+    </div>
+    <section id="preview-panel" class="panel preview-panel" hidden aria-labelledby="preview-title">
+      <div class="batch-heading"><h2 id="preview-title">Prévia</h2><button id="close-preview" class="secondary">Fechar</button></div>
+      <img id="preview-image" alt="Prévia da impressão em A4">
+    </section>
+    <iframe id="print-frame" title="Impressão" class="print-frame"></iframe>
+  </main>
+</body>
+</html>
+
