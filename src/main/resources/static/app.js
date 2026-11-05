@@ -80,7 +80,7 @@ $('scan-form').onsubmit = event => {
 // O título faz parte do arquivo: editá-lo também invalida o PDF anterior.
 $('title').addEventListener('input', save);
 $('new-batch').onclick = () => {
-  if (confirm('Apagar lote atual?')) {
+  if (confirm('Apagar seriais atual?')) {
     serials = []; $('title').value = ''; $('status').textContent = 'Lote limpo.'; save(); $('serial').focus();
   }
 };

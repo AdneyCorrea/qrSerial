@@ -8,7 +8,8 @@
 * { box-sizing: border-box; }
 body { margin: 0; }
 main { max-width: 1040px; margin: auto; padding: 28px; }
-header { margin-bottom: 28px; border-bottom: 1px solid #ddd; }
+header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 28px; border-bottom: 1px solid #ddd; }
+.author { font-size: 10px; color: #666; white-space: nowrap; }
 h1 { font-size: 28px; margin: 0 0 20px; }
 h2 { font-size: 20px; margin: 0 0 24px; }
 p { line-height: 1.5; }
